@@ -1,0 +1,38 @@
+[
+	{
+		"name": "Discord Rich Presence",
+		"logo": "https://pms-images.now.sh/discord.png",
+		"description": "Show the movie or series you're watching in Discord. This add-on requires you to have the Discord desktop app installed and running.",
+		"types": ["Movies", "Series"],
+		"repo": "AktasC/stremio-discord",
+		"requires": "1.1.9"
+	},
+	{
+		"name": "IMDB Tag",
+		"logo": "https://m.media-amazon.com/images/G/01/IMDb/BG_icon_iOS._SY230_SX307_AL_.png",
+		"description": "Add-on to create a catalog from a IMDB tag url.",
+		"types": ["Catalog"],
+		"repo": "booblyboo/stremio-imdb-tag-local"
+	},
+	{
+		"name": "IMDB List",
+		"logo": "https://m.media-amazon.com/images/G/01/IMDb/BG_icon_iOS._SY230_SX307_AL_.png",
+		"description": "Add-on to create a catalog from a IMDB list url.",
+		"types": ["Catalog"],
+		"repo": "booblyboo/stremio-imdb-list-local"
+	},
+	{
+		"name": "IMDB Watchlist",
+		"logo": "https://m.media-amazon.com/images/G/01/IMDb/BG_icon_iOS._SY230_SX307_AL_.png",
+		"description": "Add-on to create a catalog from a IMDB watchlist url.",
+		"types": ["Catalog"],
+		"repo": "booblyboo/stremio-imdb-watchlist-local"
+	},
+	{
+		"name": "IMDB ID search",
+		"logo": "https://m.media-amazon.com/images/G/01/IMDb/BG_square._CB1509067564_SY230_SX307_AL_.png",
+		"description": "search movies by IMDB ID",
+		"types": ["Catalog"],
+		"repo": "jlvcm/stremio-imdb-id"
+	}
+]
