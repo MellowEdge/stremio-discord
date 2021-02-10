@@ -18,7 +18,12 @@ Movie:
 
 ## Installation
 
-Install with [PimpMyStremio](https://github.com/sungshon/PimpMyStremio) or run it manually using `node server.js`
+Create a new folder in `%appdata%\PimpMyStremio\sideload\`  
+Download this repo as a zip and extract it's content in the new folder  
+Start or Restart PMS to see the addon in the "sideloaded" category.  
+~~Install with [PimpMyStremio](https://github.com/sungshon/PimpMyStremio)~~  
+OR  
+Run it manually using `node server.js`
 
 ## Credits
 
