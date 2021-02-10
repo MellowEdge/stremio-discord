@@ -1,5 +1,5 @@
 // Translates a IMDB runtime string to a Date().
-function parseMovieRuntime(runtimeString) {
+function parseDuration(runtimeString) {
   let time = 0;
   let current = "";
 
@@ -34,4 +34,4 @@ function addSeconds(date, seconds) {
   return date;
 }
 
-module.exports = parseMovieRuntime;
+module.exports = parseDuration;
