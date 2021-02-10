@@ -10,11 +10,11 @@ This add-on needs the Discord Desktop application installed on your device in or
 
 Series:
 
-![got](https://i.imgur.com/QuZZTLR.png)
+![Series](https://i.imgur.com/1ddoMyl.png)
 
 Movie:
 
-![captain marvel](https://i.imgur.com/PNfjTnw.png)
+![Movie](https://i.imgur.com/y0G9b4x.png)
 
 ## Installation
 
