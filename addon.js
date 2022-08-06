@@ -9,8 +9,8 @@ const addon = new addonBuilder(manifest);
 // Base informations aka not watching anything currently
 function showStartupPresence() {
   updatePresence({
-    details: "Watch all the content you enjoy in one place",
-    state: "https://stremio.com/",
+    details: "Stremio",
+    state: "Just browsing",
     largeImageKey: "stremio-logo",
     largeImageText: "https://www.stremio.com/",
   });
@@ -36,24 +36,24 @@ addon.defineSubtitlesHandler(async (args) => {
   switch (args.type) {
     case "movie": {
       updatePresence({
-        details: `🍿 ${info.name} (${info.year}) 🍿`,
-        state: `⭐ IMDB Rating : ${info.imdbRating}/10 ⭐`,
+        details: `${info.name} (${info.year})`,
+        state: `IMDB Rating : ${info.imdbRating}/10 ⭐`,
         startTimestamp: Date.now(),
         endTimestamp: duration.estimatedWatchedDate,
-        largeImageKey: "stremio-logo",
-        largeImageText: "https://www.stremio.com/",
+        largeImageKey: info.poster,
+        largeImageText: info.name
       });
       break;
     }
     // Show Season & Episode if series
     case "series": {
       updatePresence({
-        details: `🍿 ${info.name} 🍿`,
-        state: `🍿 S${season}.E${episode} - ${info.imdbRating}/10 ⭐`,
+        details: info.name,
+        state: `S${season}.E${episode} - ${info.imdbRating}/10 ⭐`,
         startTimestamp: Date.now(),
         endTimestamp: duration.estimatedWatchedDate,
-        largeImageKey: "stremio-logo",
-        largeImageText: "https://www.stremio.com/",
+        largeImageKey: info.poster,
+		largeImageText: info.name
       });
       break;
     }
@@ -66,12 +66,12 @@ addon.defineSubtitlesHandler(async (args) => {
 
 addon.defineStreamHandler(async (args) => {
   const info = await imdb(args);
-
+  const typeStr = info.type == "movie" ? "movie" : "show";
   updatePresence({
-    details: `🍿 Looking for a ${info.type}`,
-    state: `⭐ Might watch ${info.name}`,
-    largeImageKey: "stremio-logo",
-    largeImageText: "https://www.stremio.com/",
+    details: `Looking for a ${typeStr}`,
+    state: `Might watch \"${info.name}\"`,
+    largeImageKey: info.poster,
+	largeImageText: info.name
   });
 
   return Promise.resolve({ streams: {}, cacheMaxAge: 0 });
